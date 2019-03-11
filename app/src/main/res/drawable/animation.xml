@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@drawable/lucina1"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/lucina2"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/lucina3"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/lucina4"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/lucina5"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/lucina6"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/lucina7"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/lucina8"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/lucina9"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/lucina10"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/lucina11"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/lucina12"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/lucina13"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/lucina14"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/lucina15"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/lucina16"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/lucina17"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina18"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina19"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina20"
+        android:duration="25" />
+
+    <item
+        android:drawable="@drawable/lucina21"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/lucina22"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/lucina23"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/lucina24"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/lucina25"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina26"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina27"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina28"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina29"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina30"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina31"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina32"
+        android:duration="25" />
+
+    <item
+        android:drawable="@drawable/lucina33"
+        android:duration="25" />
+
+    <item
+        android:drawable="@drawable/lucina34"
+        android:duration="20" />
+
+    <item
+        android:drawable="@drawable/lucina35"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/lucina36"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina37"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina38"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/lucina41"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/lucina42"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/lucina43"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/lucina44"
+        android:duration="150" />
+
+    <item
+        android:drawable="@drawable/lucina45"
+        android:duration="150" />
+
+    <item
+        android:drawable="@drawable/lucina46"
+        android:duration="150" />
+
+    <item
+        android:drawable="@drawable/lucina47"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/lucina48"
+        android:duration="100" />
+
+</animation-list>

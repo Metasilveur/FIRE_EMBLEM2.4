@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@drawable/space1"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/space2"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/space3"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/space4"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/space5"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/space6"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/space7"
+        android:duration="300" />
+
+
+</animation-list>
