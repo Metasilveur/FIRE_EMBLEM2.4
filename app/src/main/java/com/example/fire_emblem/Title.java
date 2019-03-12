@@ -24,7 +24,7 @@ public class Title extends AppCompatActivity {
 
         ImageView animation = (ImageView) findViewById(R.id.lucina);
 
-        animation.setBackgroundResource(R.drawable.cat_anim);
+        animation.setBackgroundResource(R.drawable.animation);
 
         final AnimationDrawable LuciAnimation = (AnimationDrawable) animation.getBackground();
 
@@ -68,7 +68,7 @@ public class Title extends AppCompatActivity {
         animation.setScaleY(0.4f);
         animation.setY(-500);*/
 
-        LuciAnimation.setOneShot(false);
+        LuciAnimation.setOneShot(true);
 
         LuciAnimation.start();
 

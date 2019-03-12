@@ -17,7 +17,9 @@ import android.util.TypedValue;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -103,6 +105,31 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(4, dpToPx(10), true));
         // define an adapter
         mAdapter = new CharacterAdapter(this, listCharacter);
+
+        Switch testSwitch = findViewById(R.id.switch_choice);
+
+        testSwitch.setChecked(true);
+
+        testSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked)
+                {
+                    for(Character perso : listCharacter)
+                    {
+                        perso.select = true;
+                        mAdapter.notifyDataSetChanged();
+                    }
+                } else {
+                    for(Character perso : listCharacter)
+                    {
+                        perso.select = false;
+                        mAdapter.notifyDataSetChanged();
+                    }
+                }
+            }
+        });
+
         recyclerView.setAdapter(mAdapter);
 
 
@@ -183,6 +210,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 }
+
                 MyIntent.putExtra("LIST", (Serializable) listSkills);
 
                 startActivity(MyIntent);

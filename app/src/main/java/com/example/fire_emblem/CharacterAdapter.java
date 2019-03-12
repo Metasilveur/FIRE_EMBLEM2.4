@@ -19,18 +19,15 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.MyVi
     private Context context;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView name, moveType, total;
-        public ImageView image, type, cadre, bordure;
+        public ImageView image, type, cadre, bordure, foot;
 
         public MyViewHolder(View view) {
             super(view);
-            name = (TextView) view.findViewById(R.id.name);
-            moveType = (TextView) view.findViewById(R.id.moveType);
-            total = (TextView) view.findViewById(R.id.total);
             image = view.findViewById(R.id.image);
             type = view.findViewById(R.id.type);
             cadre = view.findViewById(R.id.cadre);
             bordure = view.findViewById(R.id.bordure);
+            foot = view.findViewById(R.id.foot);
         }
     }
 
@@ -48,15 +45,18 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.MyVi
         return new MyViewHolder(itemView);
     }
 
+
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Character character = characterList.get(position);
+
         /*SpannableString spannableString = new SpannableString(character.getShortName());
         spannableString.setSpan(new BackgroundColorSpan(Color.WHITE), 0,spannableString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         holder.name.setText(spannableString);*/
         //holder.moveType.setText(character.getMoveType());
         //holder.total.setText(character.getWeaponType());
         //holder.type.setImageResource(R.drawable.grey_dragon);
+
         if(character.getWeaponType().equals("Red Sword"))
         {
             holder.type.setImageResource(R.drawable.red_sword);
@@ -165,10 +165,45 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.MyVi
             holder.bordure.setImageResource(R.drawable.bordure6);
         }
 
+        if(character.getMoveType().equals("Infantry"))
+        {
+            holder.foot.setImageResource(R.drawable.infantery);
+        }
+
+        if(character.getMoveType().equals("Flying"))
+        {
+            holder.foot.setImageResource(R.drawable.fly);
+        }
+
+        if(character.getMoveType().equals("Armored"))
+        {
+            holder.foot.setImageResource(R.drawable.armor);
+        }
+
+        if(character.getMoveType().equals("Cavalry"))
+        {
+            holder.foot.setImageResource(R.drawable.cavalry);
+        }
+
         Glide.with(context)
                 .load(character.getAssets().getPortrait().getPx75())
                 //.apply(RequestOptions.circleCropTransform())
                 .into(holder.image);
+
+        if(character.isSelect()) {
+            holder.image.setImageAlpha(255);
+            holder.foot.setImageAlpha(255);
+            holder.type.setImageAlpha(255);
+            holder.bordure.setImageAlpha(255);
+            holder.cadre.setImageAlpha(255);
+        }
+        else {
+            holder.image.setImageAlpha(120);
+            holder.foot.setImageAlpha(120);
+            holder.type.setImageAlpha(120);
+            holder.bordure.setImageAlpha(120);
+            holder.cadre.setImageAlpha(120);
+        }
     }
 
     @Override

@@ -12,6 +12,11 @@ public class Character {
     public String origin;
     public List<Skills> skills;
     public String rarities;
+    public boolean select=true;
+
+    public boolean isSelect() {
+        return select;
+    }
 
     public String getRarities() {
         return rarities;
