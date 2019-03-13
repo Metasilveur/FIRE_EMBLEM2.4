@@ -17,8 +17,11 @@ import android.util.TypedValue;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -106,29 +109,46 @@ public class MainActivity extends AppCompatActivity {
         // define an adapter
         mAdapter = new CharacterAdapter(this, listCharacter);
 
-        Switch testSwitch = findViewById(R.id.switch_choice);
+        Spinner spinner = findViewById(R.id.spin_choice);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.move_type, android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        testSwitch.setChecked(true);
+        spinner.setAdapter(adapter);
 
-        testSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked)
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Object item = parent.getItemAtPosition(position);
+
+                for(Character perso : listCharacter)
                 {
-                    for(Character perso : listCharacter)
+                    if(perso.getMoveType().equals(item.toString())) {
+                        perso.select = true;
+                        mAdapter.notifyDataSetChanged();
+                    }
+                    else if(item.toString().equals("All"))
                     {
                         perso.select = true;
                         mAdapter.notifyDataSetChanged();
                     }
-                } else {
-                    for(Character perso : listCharacter)
-                    {
+                    else{
                         perso.select = false;
                         mAdapter.notifyDataSetChanged();
                     }
                 }
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
+
+        Switch testSwitch = findViewById(R.id.switch_choice);
+
+        testSwitch.setChecked(true);
 
         recyclerView.setAdapter(mAdapter);
 

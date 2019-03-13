@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">FIRE_EMBLEM</string>
+
+    <string-array name="move_type">
+        <item>All</item>
+        <item>Cavalry</item>
+        <item>Armored</item>
+        <item>Flying</item>
+        <item>Infantry</item>
+    </string-array>
 </resources>
