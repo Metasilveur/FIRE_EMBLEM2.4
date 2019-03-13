@@ -45,6 +45,7 @@ import static android.graphics.Color.BLACK;
 import static android.graphics.Color.WHITE;
 
 public class MainActivity extends AppCompatActivity {
+
     private List<Character> characterList = new ArrayList<>();
     private RecyclerView recyclerView;
     private CharacterAdapter mAdapter;

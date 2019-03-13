@@ -45,6 +45,7 @@ public class MainController {
 
 
         Call<RestFireEmblemResponse> call = restApi.getAlllHeroes();
+
         call.enqueue(new Callback<RestFireEmblemResponse>() {
             @Override
             public void onResponse(Call<RestFireEmblemResponse> call, Response<RestFireEmblemResponse> response) {

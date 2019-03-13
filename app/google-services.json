@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "888029210573",
+    "firebase_url": "https://fire-emblem-esiea.firebaseio.com",
+    "project_id": "fire-emblem-esiea",
+    "storage_bucket": "fire-emblem-esiea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888029210573:android:8313393569c4dcf2",
+        "android_client_info": {
+          "package_name": "com.example.fire_emblem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888029210573-63ndubg0s2lrkb3kal2rtdmdmtslc7gb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkNCci8Txocg92kcWn051mdnH_Rb6kWvk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

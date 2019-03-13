@@ -2,6 +2,7 @@ package com.example.fire_emblem;
 import java.util.List;
 
 public class RestFireEmblemResponse {
+
     private List<Character> heroes;
     private List<Skills> skills;
 
@@ -17,3 +18,5 @@ public class RestFireEmblemResponse {
         this.heroes = heroes;
     }
 }
+
+
