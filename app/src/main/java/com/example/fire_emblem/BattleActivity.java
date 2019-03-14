@@ -38,11 +38,34 @@ public class BattleActivity extends AppCompatActivity {
         int def_Fighter2 = Integer.parseInt(Fighter1.getGrowths().getDef());
         int res_Fighter2 = Integer.parseInt(Fighter1.getGrowths().getRes());
         int spd_Fighter2 = Integer.parseInt(Fighter1.getGrowths().getSpd());
+/*
+        if((Fighter1.getWeaponType().equals("Blue tome"))
+        ||(Fighter1.getWeaponType().equals("Red tome"))
+        ||(Fighter1.getWeaponType().equals("Green tome"))
+        ||(Fighter1.getWeaponType().equals("Colorless tome")))
+        {
+            def_Fighter2 = res_Fighter2;
+        }
+
+        if((Fighter2.getWeaponType().equals("Blue tome"))
+                ||(Fighter2.getWeaponType().equals("Red tome"))
+                ||(Fighter2.getWeaponType().equals("Green tome"))
+                ||(Fighter2.getWeaponType().equals("Colorless tome")))
+        {
+            def_Fighter1 = res_Fighter1;
+        }*/
+
+        int cpt_turn=1;
 
         while ((hp_Fighter1 > 0) && (hp_Fighter2 > 0))
         {
             String score1 = "";
             String score2 = "";
+            String score1_txt = "";
+            String score2_txt = "";
+            String turn = "TURN ";
+            turn += Integer.toString(cpt_turn);
+            cpt_turn +=1;
 
             if(spd_Fighter1 >= spd_Fighter2)
             {
@@ -57,6 +80,12 @@ public class BattleActivity extends AppCompatActivity {
                 {
                     hp_Fighter2=0;
                 }
+
+                score1_txt += Fighter1.getShortName();
+                score1_txt += " attacks first and deals ";
+                score1_txt+=Integer.toString(damage);
+                score1_txt+=" damage(s) !";
+
 
                 score1+=Integer.toString(hp_Fighter1);
                 score1+=" - ";
@@ -73,6 +102,11 @@ public class BattleActivity extends AppCompatActivity {
                 {
                     hp_Fighter1=0;
                 }
+
+                score2_txt += Fighter2.getShortName();
+                score2_txt += " attacks in second and deals ";
+                score2_txt+=Integer.toString(damage);
+                score2_txt+=" damage(s) !";
 
                 score2+=Integer.toString(hp_Fighter1);
                 score2+=" - ";
@@ -91,6 +125,11 @@ public class BattleActivity extends AppCompatActivity {
                     hp_Fighter1=0;
                 }
 
+                score1_txt += Fighter2.getShortName();
+                score1_txt += " attacks first and deals ";
+                score1_txt+=Integer.toString(damage);
+                score1_txt+=" damage(s) !";
+
                 score1+=Integer.toString(hp_Fighter1);
                 score1+=" - ";
                 score1+=Integer.toString(hp_Fighter2);
@@ -107,12 +146,17 @@ public class BattleActivity extends AppCompatActivity {
                     hp_Fighter2=0;
                 }
 
+                score2_txt += Fighter1.getShortName();
+                score2_txt += " attacks in second and deals ";
+                score2_txt+=Integer.toString(damage);
+                score2_txt+=" damage(s) !";
+
                 score2+=Integer.toString(hp_Fighter1);
                 score2+=" - ";
                 score2+=Integer.toString(hp_Fighter2);
             }
 
-            battleList.add(new Battle(Fighter1, Fighter2, score1, score2));
+            battleList.add(new Battle(Fighter1, Fighter2, score1, score2, score1_txt, score2_txt, turn));
         }
         /*battleList.add( new Battle( Fighter1,Fighter2 , "30-40", "22-40"));
         battleList.add( new Battle( Fighter1,Fighter2 , "30-40", "22-40"));

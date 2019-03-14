@@ -29,8 +29,9 @@ public class BattleAdapter extends RecyclerView.Adapter<BattleAdapter.MyViewHold
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView fighter2_name,fighter1_name, score1, score2;
+        public TextView fighter2_name,fighter1_name, score1, score2, score1_txt, score2_txt;
         public ImageView fighter1, fighter2;
+        public  TextView turn;
 
         public MyViewHolder(View view) {
             super(view);
@@ -38,8 +39,11 @@ public class BattleAdapter extends RecyclerView.Adapter<BattleAdapter.MyViewHold
             fighter1_name = (TextView) view.findViewById(R.id.fighter1_name);
             score1 = (TextView) view.findViewById(R.id.score1);
             score2 = (TextView) view.findViewById(R.id.score2);
+            score1_txt = (TextView) view.findViewById(R.id.score1_txt);
+            score2_txt = (TextView) view.findViewById(R.id.score2_txt);
             fighter1 = view.findViewById(R.id.fighter1);
             fighter2 = view.findViewById(R.id.fighter2);
+            turn = view.findViewById(R.id.turn);
         }
     }
 
@@ -58,13 +62,24 @@ public class BattleAdapter extends RecyclerView.Adapter<BattleAdapter.MyViewHold
 
         holder.fighter2_name.setText(battle.getCharacter2().getShortName());
         holder.fighter1_name.setText(battle.getCharacter1().getShortName());
+
         holder.score1.setText(battle.getScore1());
         holder.score2.setText(battle.getScore2());
 
+        holder.score1_txt.setText(battle.getScore1_txt());
+        holder.score2_txt.setText(battle.getScore2_txt());
+
         holder.fighter1_name.setTextColor(WHITE);
         holder.fighter2_name.setTextColor(WHITE);
+
         holder.score1.setTextColor(WHITE);
         holder.score2.setTextColor(WHITE);
+
+        holder.score1_txt.setTextColor(WHITE);
+        holder.score2_txt.setTextColor(WHITE);
+
+        holder.turn.setText(battle.getTurn());
+        holder.turn.setTextColor(WHITE);
 
         Glide.with(context)
                 .load(battle.getCharacter1().getAssets().getPortrait().getPx113())

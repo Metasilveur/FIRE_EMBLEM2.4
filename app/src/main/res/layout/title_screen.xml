@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/mainlayout">
+    android:id="@+id/mainlayout"
+    android:background="@drawable/background3">
 
     <ImageView
         android:id="@+id/lucina"
