@@ -1,6 +1,8 @@
 package com.example.fire_emblem;
 
-public class Growths {
+import java.io.Serializable;
+
+public class Growths implements Serializable {
     private String res;
 
     private String def;

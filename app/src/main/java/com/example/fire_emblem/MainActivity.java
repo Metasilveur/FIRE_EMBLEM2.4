@@ -1,48 +1,34 @@
 package com.example.fire_emblem;
 
-import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.util.TypedValue;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.example.fire_emblem.controller.CharacterAdapter;
+import com.example.fire_emblem.controller.MainController;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-
 import static android.graphics.Color.BLACK;
-import static android.graphics.Color.WHITE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     private CharacterAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private MainController controller;
+
+    public final static String TEST = "ECHEC";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,43 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-
-/*
-
-
-        mAdapter = new CharacterAdapter(characterList);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-        recyclerView.setAdapter(mAdapter);
-
-        recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new RecyclerTouchListener.ClickListener() {
-            @Override
-            public void onClick(View view, int position) {
-                Character character = characterList.get(position);
-                Toast.makeText(getApplicationContext(), ((Character) character).getName() + " is selected!", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onLongClick(View view, int position) {
-            }
-        }));
-
-        CreateCharacterList();*/
     }
 
-    /*private void CreateCharacterList() {
-        Character character = new Character("Abel", "Cavalry", 150);
-        characterList.add(character);
-        character = new Character("Lucina", "Swordman", 170);
-        characterList.add(character);
-        character = new Character("Chrom", "Fdp", 165);
-        characterList.add(character);
-        mAdapter.notifyDataSetChanged();
-    }*/
-
     public void showList(final List<Character> listCharacter) {
+
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
 
         recyclerView.setHasFixedSize(true);
         // use a linear layout manager
@@ -120,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Object item = parent.getItemAtPosition(position);
+
+                SharedPreferences.Editor editor = preferences.edit();
+
+                editor.putString(TEST, item.toString());
+                editor.commit();
 
                 for(Character perso : listCharacter)
                 {
@@ -143,13 +105,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
-
-        Switch testSwitch = findViewById(R.id.switch_choice);
-
-        testSwitch.setChecked(true);
 
         recyclerView.setAdapter(mAdapter);
 
@@ -166,7 +123,8 @@ public class MainActivity extends AppCompatActivity {
                 perso = findViewById(R.id.perso);
                 name_click = findViewById(R.id.name_click);
 
-                name_click.setText(character.getShortName());
+                //name_click.setText(character.getShortName());
+                name_click.setText(preferences.getString(TEST, "WESH"));
                 name_click.setTextColor(BLACK);
 
                 Glide.with(MainActivity.this)

@@ -1,6 +1,8 @@
 package com.example.fire_emblem;
 
-public class Assets {
+import java.io.Serializable;
+
+public class Assets implements Serializable {
     private Portrait portrait;
 
     public Portrait getPortrait ()

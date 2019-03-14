@@ -24,6 +24,18 @@
 
         </activity>
 
+        <activity android:name=".SelectActivity">
+
+        </activity>
+
+        <activity android:name=".SelectCharacter">
+
+        </activity>
+
+        <activity android:name=".BattleActivity">
+
+        </activity>
+
         <activity android:name=".Title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

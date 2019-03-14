@@ -1,6 +1,8 @@
 package com.example.fire_emblem;
 
-public class Portrait {
+import java.io.Serializable;
+
+public class Portrait implements Serializable {
     private String px75;
     private String px113;
     private String px150;

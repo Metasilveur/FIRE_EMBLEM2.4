@@ -1,8 +1,9 @@
 package com.example.fire_emblem;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Character {
+public class Character implements Serializable {
     public String name;
     public String shortName;
     public String moveType;
@@ -13,6 +14,8 @@ public class Character {
     public List<Skills> skills;
     public String rarities;
     public boolean select=true;
+
+
 
     public boolean isSelect() {
         return select;

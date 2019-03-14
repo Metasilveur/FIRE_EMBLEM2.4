@@ -8,6 +8,8 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.fire_emblem.controller.SkillsAdapter;
+
 import java.util.List;
 
 public class ThirdActivity  extends AppCompatActivity {
