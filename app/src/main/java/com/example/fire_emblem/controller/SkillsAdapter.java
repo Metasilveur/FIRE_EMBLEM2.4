@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.fire_emblem.R;
-import com.example.fire_emblem.Skills;
+import com.example.fire_emblem.model.Skills;
 
 import java.util.List;
 

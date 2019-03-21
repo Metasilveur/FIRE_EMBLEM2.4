@@ -1,4 +1,6 @@
-package com.example.fire_emblem;
+package com.example.fire_emblem.model;
+
+import com.example.fire_emblem.model.Portrait;
 
 import java.io.Serializable;
 

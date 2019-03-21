@@ -1,4 +1,4 @@
-package com.example.fire_emblem;
+package com.example.fire_emblem.view;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -7,11 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.fire_emblem.R;
+import com.example.fire_emblem.model.Skills;
 
 import java.io.Serializable;
 import java.util.List;

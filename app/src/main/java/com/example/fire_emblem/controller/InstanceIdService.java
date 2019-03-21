@@ -1,4 +1,4 @@
-package com.example.fire_emblem;
+package com.example.fire_emblem.controller;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;

@@ -1,4 +1,4 @@
-package com.example.fire_emblem;
+package com.example.fire_emblem.view;
 
 import android.content.Intent;
 import android.os.Bundle;

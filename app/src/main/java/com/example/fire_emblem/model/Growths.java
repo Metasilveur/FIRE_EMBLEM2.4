@@ -1,4 +1,4 @@
-package com.example.fire_emblem;
+package com.example.fire_emblem.model;
 
 import java.io.Serializable;
 

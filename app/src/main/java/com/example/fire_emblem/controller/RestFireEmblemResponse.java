@@ -1,4 +1,7 @@
-package com.example.fire_emblem;
+package com.example.fire_emblem.controller;
+import com.example.fire_emblem.model.Character;
+import com.example.fire_emblem.model.Skills;
+
 import java.util.List;
 
 public class RestFireEmblemResponse {

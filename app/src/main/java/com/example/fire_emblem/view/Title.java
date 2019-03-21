@@ -1,19 +1,14 @@
-package com.example.fire_emblem;
+package com.example.fire_emblem.view;
 
-import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
 import android.widget.RelativeLayout;
 import android.graphics.drawable.AnimationDrawable;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import java.io.Serializable;
+import com.example.fire_emblem.R;
 
 public class Title extends AppCompatActivity {
 
@@ -24,15 +19,35 @@ public class Title extends AppCompatActivity {
 
         ImageView animation = (ImageView) findViewById(R.id.lucina);
 
-        animation.setBackgroundResource(R.drawable.anim_slash);
+        animation.setBackgroundResource(R.drawable.animation);
 
         final AnimationDrawable LuciAnimation = (AnimationDrawable) animation.getBackground();
 
-        /*
+
+        /*AlphaAnimation TEST = new AlphaAnimation(1.0f,0.0f);
+        TEST.setDuration(1000);
+        TEST.setFillAfter(true);
+
+        TEST.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                LuciAnimation.start();
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
         animation.setScaleX(0.5f);
-        animation.setScaleY(0.4f);
-        animation.setY(500);
-        TranslateAnimation     translateAnimation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+        animation.setScaleY(0.5f);*/
+        /*TranslateAnimation     translateAnimation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
                 Animation.RELATIVE_TO_SELF,0.0f, Animation.RELATIVE_TO_SELF, -1.0f);
         translateAnimation.setInterpolator(new AccelerateInterpolator());
         translateAnimation.setDuration(3000);
@@ -60,15 +75,15 @@ public class Title extends AppCompatActivity {
                 // TODO Auto-generated method stub
 
             }
-        });
+        });*/
 
-        animation.startAnimation(translateAnimation);*/
+        //animation.startAnimation(TEST);
 
         /*animation.setScaleX(0.5f);
         animation.setScaleY(0.4f);
         animation.setY(-500);*/
 
-        LuciAnimation.setOneShot(false);
+        LuciAnimation.setOneShot(true);
 
         LuciAnimation.start();
 

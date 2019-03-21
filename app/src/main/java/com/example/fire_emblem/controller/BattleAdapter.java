@@ -9,9 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.fire_emblem.Battle;
+import com.example.fire_emblem.model.Battle;
 import com.example.fire_emblem.R;
-import com.example.fire_emblem.Skills;
 
 import java.util.List;
 

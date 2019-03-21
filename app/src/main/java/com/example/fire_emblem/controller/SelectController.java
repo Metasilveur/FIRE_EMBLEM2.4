@@ -1,10 +1,7 @@
 package com.example.fire_emblem.controller;
-import com.example.fire_emblem.Character;
-import com.example.fire_emblem.MainActivity;
-import com.example.fire_emblem.RestFireEmblemApi;
-import com.example.fire_emblem.RestFireEmblemResponse;
-import com.example.fire_emblem.SelectCharacter;
-import com.example.fire_emblem.Skills;
+import com.example.fire_emblem.model.Character;
+import com.example.fire_emblem.view.SelectCharacter;
+import com.example.fire_emblem.model.Skills;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

@@ -1,7 +1,6 @@
-package com.example.fire_emblem;
+package com.example.fire_emblem.controller;
 import retrofit2.Call;
 import retrofit2.http.GET;
-import com.example.fire_emblem.RestFireEmblemResponse;
 
 public interface RestFireEmblemApi {
 

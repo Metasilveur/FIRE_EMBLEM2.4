@@ -13,31 +13,35 @@
         android:theme="@style/AppTheme"
         android:testOnly="false">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".view.MainActivity">
 
         </activity>
 
-        <activity android:name=".SecondActivity">
+        <activity android:name=".view.SecondActivity">
 
         </activity>
 
-        <activity android:name=".ThirdActivity">
+        <activity android:name=".view.ThirdActivity">
 
         </activity>
 
-        <activity android:name=".SelectActivity">
+        <activity android:name=".view.SelectActivity">
 
         </activity>
 
-        <activity android:name=".SelectCharacter">
+        <activity android:name=".view.SelectCharacter">
 
         </activity>
 
-        <activity android:name=".BattleActivity">
+        <activity android:name=".view.BattleActivity">
 
         </activity>
 
-        <activity android:name=".Title">
+        <activity android:name=".view.BattleActivityDynamic">
+
+        </activity>
+
+        <activity android:name=".view.Title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,12 +49,12 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".MessageReceiver">
+        <service android:name=".controller.MessageReceiver">
         <intent-filter>
             <action android:name="com.google.firebase.MESSAGING_EVENT" />
         </intent-filter>
         </service>
-    <service android:name=".InstanceIdService">
+    <service android:name=".controller.InstanceIdService">
     <intent-filter>
         <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
     </intent-filter>

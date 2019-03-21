@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.example.fire_emblem.Character;
+import com.example.fire_emblem.model.Character;
 import com.example.fire_emblem.R;
 
 import java.util.List;
