@@ -36,4 +36,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-messaging:17.0.0'
     apply plugin: 'com.google.gms.google-services'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'
 }

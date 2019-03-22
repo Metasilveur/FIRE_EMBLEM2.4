@@ -125,13 +125,13 @@ public class MainActivity extends AppCompatActivity {
                 perso = findViewById(R.id.perso);
                 name_click = findViewById(R.id.name_click);
 
-                //name_click.setText(character.getShortName());
-                name_click.setText(preferences.getString(TEST, "WESH"));
+                name_click.setText(character.getShortName());
+                //name_click.setText(preferences.getString(TEST, "WESH"));
                 name_click.setTextColor(BLACK);
 
                 Glide.with(MainActivity.this)
                         .load(character.getAssets().getPortrait().getPx113())
-                        .apply(RequestOptions.circleCropTransform())
+                        //.apply(RequestOptions.circleCropTransform())
                         .into(perso);
             }
 

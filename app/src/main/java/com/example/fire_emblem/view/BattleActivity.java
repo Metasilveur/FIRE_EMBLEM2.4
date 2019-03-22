@@ -71,7 +71,7 @@ public class BattleActivity extends AppCompatActivity {
 
             if(spd_Fighter1 >= spd_Fighter2)
             {
-                int damage = def_Fighter2 - atq_Fighter1;
+                int damage =  atq_Fighter1 - def_Fighter2;
                 if(damage<0)
                 {
                     damage=1;
@@ -93,7 +93,7 @@ public class BattleActivity extends AppCompatActivity {
                 score1+=" - ";
                 score1+=Integer.toString(hp_Fighter2);
 
-                damage = def_Fighter1 - atq_Fighter2;
+                damage =   atq_Fighter2-def_Fighter1;
                 if(damage<0)
                 {
                     damage=1;
@@ -115,7 +115,7 @@ public class BattleActivity extends AppCompatActivity {
                 score2+=Integer.toString(hp_Fighter2);
 
             }else{
-                int damage = def_Fighter1 - atq_Fighter2;
+                int damage =  atq_Fighter2- def_Fighter1;
                 if(damage<0)
                 {
                     damage=1;
@@ -136,7 +136,7 @@ public class BattleActivity extends AppCompatActivity {
                 score1+=" - ";
                 score1+=Integer.toString(hp_Fighter2);
 
-                damage = def_Fighter2 - atq_Fighter1;
+                damage =  atq_Fighter1-def_Fighter2;
                 if(damage<0)
                 {
                     damage=1;
