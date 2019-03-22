@@ -14,4 +14,6 @@ Pour ce projet mobile, j'ai choisi de créer une application sur un jeu vidéo R
 
 ## Consignes et contraintes du projet
 Ce projet présentait plusieurs consignes à respecter : 
+
 * Utiliser une recycler view : 
+Dans ce projet, j'utilise plusieurs recycler view : 
