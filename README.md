@@ -1,4 +1,4 @@
-Projet Mobile - Robert Bui - 33
+Projet Mobile
 ========
 
 ## Sommaire
