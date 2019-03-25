@@ -1,4 +1,4 @@
-package com.example.fire_emblem.view;
+package com.example.fire_emblem.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.fire_emblem.R;
+import com.example.fire_emblem.view.SelectCharacter;
 
 public class SelectActivity extends AppCompatActivity {
     @Override

@@ -1,4 +1,4 @@
-package com.example.fire_emblem.view;
+package com.example.fire_emblem.controller;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,12 +19,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.example.fire_emblem.R;
 import com.example.fire_emblem.model.Skills;
-import com.example.fire_emblem.controller.CharacterAdapter;
-import com.example.fire_emblem.controller.MainController;
 import com.example.fire_emblem.model.Character;
+import com.example.fire_emblem.view.CharacterAdapter;
+import com.example.fire_emblem.view.RecyclerTouchListener;
 
 import java.io.Serializable;
 import java.util.ArrayList;

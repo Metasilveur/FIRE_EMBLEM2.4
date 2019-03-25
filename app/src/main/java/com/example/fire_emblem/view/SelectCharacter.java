@@ -15,7 +15,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.fire_emblem.R;
-import com.example.fire_emblem.controller.CharacterAdapter;
+import com.example.fire_emblem.controller.BattleActivityDynamic;
 import com.example.fire_emblem.controller.SelectController;
 import com.example.fire_emblem.model.Character;
 

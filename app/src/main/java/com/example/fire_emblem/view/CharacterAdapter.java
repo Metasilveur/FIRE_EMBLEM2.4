@@ -1,4 +1,4 @@
-package com.example.fire_emblem.controller;
+package com.example.fire_emblem.view;
 
 
 import android.content.Context;
@@ -199,11 +199,11 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.MyVi
             holder.cadre.setImageAlpha(255);
         }
         else {
-            holder.image.setImageAlpha(120);
-            holder.foot.setImageAlpha(120);
-            holder.type.setImageAlpha(120);
-            holder.bordure.setImageAlpha(120);
-            holder.cadre.setImageAlpha(120);
+            holder.image.setImageAlpha(45);
+            holder.foot.setImageAlpha(45);
+            holder.type.setImageAlpha(45);
+            holder.bordure.setImageAlpha(45);
+            holder.cadre.setImageAlpha(45);
         }
     }
 

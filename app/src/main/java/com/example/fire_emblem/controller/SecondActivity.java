@@ -1,4 +1,4 @@
-package com.example.fire_emblem.view;
+package com.example.fire_emblem.controller;
 
 import android.content.Intent;
 import android.graphics.Color;

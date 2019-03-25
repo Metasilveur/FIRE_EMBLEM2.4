@@ -1,4 +1,6 @@
-package com.example.fire_emblem.view;
+package com.example.fire_emblem.controller;
+
+import java.security.SecureRandom;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -16,6 +18,8 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.fire_emblem.R;
 import com.example.fire_emblem.model.Character;
 
+import org.w3c.dom.Text;
+
 import java.io.Serializable;
 
 import static android.graphics.Color.WHITE;
@@ -27,6 +31,7 @@ public class BattleActivityDynamic extends AppCompatActivity {
 
     TextView fighter1_hp;
     TextView fighter2_hp;
+    TextView result;
 
     int fighter1_hp_int;
     int fighter2_hp_int;
@@ -37,10 +42,14 @@ public class BattleActivityDynamic extends AppCompatActivity {
     int fighter1_atq_int;
     int fighter2_atq_int;
 
+    int fighter1_spd_int;
+    int fighter2_spd_int;
+
+    SecureRandom sr = new SecureRandom();
+
     int turn;
     int actif1=0;
     int actif2=0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +64,7 @@ public class BattleActivityDynamic extends AppCompatActivity {
         fighter1_hp = findViewById(R.id.fighter1_hp);
         fighter2_hp = findViewById(R.id.fighter2_hp);
 
+        //fighter1_hp_int = sr.nextInt(60);
         fighter1_hp_int = Integer.parseInt(Fighter1.getGrowths().getHp());
         fighter2_hp_int = Integer.parseInt(Fighter2.getGrowths().getHp());
 
@@ -63,6 +73,9 @@ public class BattleActivityDynamic extends AppCompatActivity {
 
         fighter1_atq_int = Integer.parseInt(Fighter1.getGrowths().getAtk());
         fighter2_atq_int = Integer.parseInt(Fighter2.getGrowths().getAtk());
+
+        fighter1_spd_int = Integer.parseInt(Fighter1.getGrowths().getSpd());
+        fighter2_spd_int = Integer.parseInt(Fighter2.getGrowths().getSpd());
 
 
         fighter1_hp.setText(Fighter1.getGrowths().getHp()+" / "+Fighter1.getGrowths().getHp());
@@ -73,6 +86,8 @@ public class BattleActivityDynamic extends AppCompatActivity {
 
         ImageView fighter1 = findViewById(R.id.fighter1_d);
         ImageView fighter2 = findViewById(R.id.fighter2_d);
+
+        result = findViewById(R.id.result);
 
         Glide.with(this)
                 .load(Fighter1.getAssets().getPortrait().getPx113())
@@ -85,32 +100,11 @@ public class BattleActivityDynamic extends AppCompatActivity {
                 .into(fighter1);
 
         if(Integer.parseInt(Fighter1.getGrowths().getSpd())>Integer.parseInt(Fighter1.getGrowths().getSpd())) {
-            turn=1;
+            setAnimationR();
         }
         else {
-            turn=2;
+            setAnimationL();
         }
-
-        setAnimationR();
-
-        /*while(turn!=0){
-            if(turn==1)
-            {
-                if(actif1==0)
-                {
-                    setAnimationR();
-                }
-            }
-            else if(turn==2)
-            {
-                if(actif2==0)
-                {
-                    setAnimationL();
-                }
-            }
-        }*/
-
-
 
         /*fighter1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,9 +161,18 @@ public class BattleActivityDynamic extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 slashAnim.stop();
 
-                int damage = fighter1_atq_int - fighter2_def_int;
-                if(damage < 0)
-                    damage = 1;
+                //int damage = fighter1_atq_int - fighter2_def_int;
+                int damage = (int)(fighter1_atq_int*(2.5/(fighter2_def_int-20)));
+
+                //if(damage < 0)
+                //    damage = 1;
+
+                int dodge = sr.nextInt(100);
+
+                if(dodge >= fighter1_spd_int+30)
+                {
+                    damage = 0;
+                }
 
                 fighter2_hp_int -= damage;
                 if(fighter2_hp_int>0) {
@@ -178,11 +181,9 @@ public class BattleActivityDynamic extends AppCompatActivity {
                 }
                 else{
                     fighter2_hp.setText("0 / " + Fighter2.getGrowths().getHp());
+                    result.setTextColor(WHITE);
+                    result.setText(Fighter1.getShortName()+" win !");
                 }
-                /*actif1=0;
-                turn = 2;
-                if(fighter2_hp_int<0)
-                    turn=0;*/
             }
 
             @Override
@@ -220,9 +221,18 @@ public class BattleActivityDynamic extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 slashAnim1.stop();
 
-                int damage = fighter2_atq_int - fighter1_def_int;
-                if(damage < 0)
-                    damage = 1;
+                //int damage = fighter2_atq_int - fighter1_def_int;
+                int damage = (int)(fighter2_atq_int*(2.5/(fighter1_def_int-20)));
+
+                //if(damage < 0)
+                //    damage = 1;
+
+                int dodge = sr.nextInt(100);
+
+                if(dodge >= fighter2_spd_int+30)
+                {
+                    damage = 0;
+                }
 
                 fighter1_hp_int -= damage;
                 if(fighter1_hp_int>0) {
@@ -231,11 +241,9 @@ public class BattleActivityDynamic extends AppCompatActivity {
                 }
                 else{
                     fighter1_hp.setText("0 / " + Fighter1.getGrowths().getHp());
+                    result.setTextColor(WHITE);
+                    result.setText(Fighter2.getShortName()+" win !");
                 }
-                /*actif2=0;
-                turn = 1;
-                if(fighter1_hp_int<0)
-                    turn = 0;*/
             }
 
             @Override

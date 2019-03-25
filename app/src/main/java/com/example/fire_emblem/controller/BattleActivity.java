@@ -1,4 +1,4 @@
-package com.example.fire_emblem.view;
+package com.example.fire_emblem.controller;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,9 +8,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.fire_emblem.R;
-import com.example.fire_emblem.controller.BattleAdapter;
 import com.example.fire_emblem.model.Battle;
 import com.example.fire_emblem.model.Character;
+import com.example.fire_emblem.view.BattleAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

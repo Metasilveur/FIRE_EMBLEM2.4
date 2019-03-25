@@ -13,19 +13,19 @@
         android:theme="@style/AppTheme"
         android:testOnly="false">
 
-        <activity android:name=".view.MainActivity">
+        <activity android:name=".controller.MainActivity">
 
         </activity>
 
-        <activity android:name=".view.SecondActivity">
+        <activity android:name=".controller.SecondActivity">
 
         </activity>
 
-        <activity android:name=".view.ThirdActivity">
+        <activity android:name=".controller.ThirdActivity">
 
         </activity>
 
-        <activity android:name=".view.SelectActivity">
+        <activity android:name=".controller.SelectActivity">
 
         </activity>
 
@@ -33,15 +33,15 @@
 
         </activity>
 
-        <activity android:name=".view.BattleActivity">
+        <activity android:name=".controller.BattleActivity">
 
         </activity>
 
-        <activity android:name=".view.BattleActivityDynamic">
+        <activity android:name=".controller.BattleActivityDynamic">
 
         </activity>
 
-        <activity android:name=".view.Title">
+        <activity android:name=".controller.Title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
