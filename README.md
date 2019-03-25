@@ -59,6 +59,10 @@ Il s'agit d'une des fonctionnalités supplémentaires que j'ai décidé de rajou
 <br> ► Une seconde activité, où l'on affiche l'animation du combat entre les deux personnages que l'on choisit. Le combat est automatique et se fait en tour par tour : il s'arrête lorsque les points de vies d'une des deux combattants passent à 0. À ce moment, on nous propose un bouton qui nous permet de visualiser l'historique du combat.
 Si ça intéresse, les dégats se calculent de la manière suivante = attaque*(2.5/defense-20), qui permet de fixer le minimum de dégats à 2, et le maximum à 18, évitant les combats trop rapides où trop lent. Il y a également un système de de prècision, qui se calcule comme ceci : esquive = vitesse + 30 <=> % de chance de réussir une attaque, avec une maximum de 100% et un minimum de 60%.
 
+<p align="center">
+  <img src="https://image.noelshack.com/fichiers/2019/13/1/1553533544-ezgif-2-29e341ee4275.gif">
+</p>
+
 <br> ► Une troisième acitivité, qui est justemment l'historique du combat précédent. Il affiche donc, via une recycle view, le déroulé de chaque tour, avec le numéro de tour, les dégats infligés, et les points de vie finaux.
 
 
