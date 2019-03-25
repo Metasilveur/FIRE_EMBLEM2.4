@@ -45,7 +45,7 @@ En plus des indications à respecter, j'ai rajouté quelques fonctionnalités pa
 ### Première activité : écran de titre 
 Lors du démarage de l'application, une animation se lance, puis s'arrête. On peut ensuite appuyer n'importe où sur l'écran pour passer à l'activité suivante.
 <p align="center">
-  <img src="https://image.noelshack.com/fichiers/2019/13/1/1553532929-ezgif-2-4796ccc0a5b1.gif">
+  <img src="https://image.noelshack.com/fichiers/2019/13/1/1553533074-ezgif-2-b16d096a5967.gif">
 </p>
 
 ### Seconde activité : écran de sélection de mode
