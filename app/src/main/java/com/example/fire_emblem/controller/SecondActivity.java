@@ -23,6 +23,7 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.character_description);
 
         TextView name_d  = (TextView) findViewById(R.id.name_d);
@@ -36,6 +37,7 @@ public class SecondActivity extends AppCompatActivity {
         ImageView image_d = findViewById(R.id.image_d);
 
         Intent intent = getIntent();
+
         listSkills = (List<Skills>) intent.getSerializableExtra("LIST");
 
         name_d.setText(intent.getStringExtra("MyName"));

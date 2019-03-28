@@ -106,19 +106,6 @@ public class BattleActivityDynamic extends AppCompatActivity {
             setAnimationL();
         }
 
-        /*fighter1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setAnimationR();
-            }
-        });
-        fighter2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setAnimationL();
-            }
-        });*/
-
         Button LeBoutton = (Button) findViewById(R.id.historic);
 
         LeBoutton.setOnClickListener(new View.OnClickListener() {
@@ -153,7 +140,6 @@ public class BattleActivityDynamic extends AppCompatActivity {
         TEST.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-                //actif1=1;
                 slashAnim.start();
             }
 
@@ -161,11 +147,7 @@ public class BattleActivityDynamic extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 slashAnim.stop();
 
-                //int damage = fighter1_atq_int - fighter2_def_int;
                 int damage = (int)(fighter1_atq_int*(2.5/(fighter2_def_int-20)));
-
-                //if(damage < 0)
-                //    damage = 1;
 
                 int dodge = sr.nextInt(100);
 
@@ -213,7 +195,6 @@ public class BattleActivityDynamic extends AppCompatActivity {
         TEST1.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-                //actif2=1;
                 slashAnim1.start();
             }
 
@@ -221,11 +202,8 @@ public class BattleActivityDynamic extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 slashAnim1.stop();
 
-                //int damage = fighter2_atq_int - fighter1_def_int;
                 int damage = (int)(fighter2_atq_int*(2.5/(fighter1_def_int-20)));
 
-                //if(damage < 0)
-                //    damage = 1;
 
                 int dodge = sr.nextInt(100);
 

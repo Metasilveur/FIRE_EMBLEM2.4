@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FIRE_EMBLEM</string>
+    <string name="app_name">Fire Emblem Battle !</string>
 
     <string-array name="move_type">
         <item>All</item>
