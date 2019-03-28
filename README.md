@@ -25,14 +25,16 @@ J'ai opté pour l'architecture MVC (modèle - vue - controlleur)
 * Notifications Push :
 Les notifications push se font via FireBase. 
 
+* Utiliser GitFlow : 
+Il n'y a que deux branches, la branche "master" et la branche "Paufinage".
+
 * Autres fonctionnalités : 
 En plus des indications à respecter, j'ai rajouté quelques fonctionnalités parmi lesquelles :
-<br> ► un affichage graphique qui dépend des caractéristiques du personnage.
-<br> ► Un système de tri de personnage (sous forme de filtre) en fonction de leur type de déplacement.
+<br> ► un affichage graphique qui dépend des caractéristiques du personnage sélectionné.
+<br> ► Un système de tri de personnages (sous forme de filtre) en fonction de leur type de déplacement.
 <br> ► Une animation d'écran de titre.
 <br> ► Un mode de jeu de combat automatique animé, qui permet de faire combattre deux personnages au choix.
-<br> ► Un système d'historique, affichant le déroulement complet du combat mentionné précedemment.
-<br> ► Une possibilité de changer les préférences sonores ou graphiques de l'application.
+<br> ► Un système d'historique, affichant le déroulement complet du combat précedent.
 
 ## Fonctionnement détaillé de l'application
 
@@ -58,7 +60,7 @@ Cette activité montre la liste des personnages récupéré via l'Api rest. L'af
   <img src="https://image.noelshack.com/fichiers/2019/13/1/1553532795-g4617.png">
 </p>
 
-Il y a également un système de filtre, qui met en avant les personnages correspondants aux type de déplacement mit dans le spinner. (les autres personnages seront transparents). C'est également le type de déplacement qui est stocké en cache.
+Il y a également le système de filtre mentionné précédemment, qui met en avant les personnages correspondants aux type de déplacement mit dans le spinner. (les autres personnages seront transparents). C'est également le type de déplacement qui est stocké en cache.
 
 <p align="center">
   <img width="300" height="500" src="https://image.noelshack.com/fichiers/2019/13/4/1553812457-dzdzd.png">
