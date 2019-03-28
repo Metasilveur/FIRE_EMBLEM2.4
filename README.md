@@ -13,6 +13,9 @@ Dans ce projet, j'utilise plusieurs recycler view :
 <br> ► Une pour l'affichage des compétences liées aux personnages.
 <br> ► Une pour l'historique du jeu de combat (sur lequel je reviendrai plus tard).
 
+* Utilisation des données en caches :
+L'application garde simplement en cache le dernier attribut rentré dans le filtre de recherche, via les shared preferance.
+
 * Faire un appel à une API Rest :
 Dans mon cas, il s'agit d'une API rest d'un jeu vidéo que j'ai recopié, modifié puis hébergé sur mon github.
 
@@ -40,10 +43,9 @@ Lors du démarage de l'application, une animation se lance, puis s'arrête. On p
 </p>
 
 ### Seconde activité : écran de sélection de mode
-On passe ensuite à l'écran de sélection, qui nous permet de choisir entre trois modes :
+On passe ensuite à l'écran de sélection, qui nous permet de choisir entre deux modes :
 - Un mode de combat automatique.
 - L'affichage de tous les personnages récupérés par l'API rest.
-- Un mode de modification des options du jeux.
 
 ### Mode d'affichage des personnages
 Cette activité montre la liste des personnages récupéré via l'Api rest. L'affichage se fait sous forme de colonnes (4)  et de lignes. On peut cliquer une fois pour afficher un aperçu du personnage en haut de l'écran, et cliquer longuement pour afficher, dans une autre activité, le détail et les statistiques du personnage. Enfin, sur cette dernière activité, on peut cliquer sur un bouton "skills", qui affiche la liste des compétences du personnage sélectionné.
@@ -56,6 +58,10 @@ Cette activité montre la liste des personnages récupéré via l'Api rest. L'af
 Il s'agit d'une des fonctionnalités supplémentaires que j'ai décidé de rajouter dans mon projet. Ce mode se décompose en trois activités :
 <br> ► Une première activité où l'on nous demande de choisir deux combattants parmi ceux de la liste que l'on nous affiche. Les personnages sélectionnés sont affiché normalement, tandis que les autres sont transparents. On a également la possibilité d'appuyer sur un personnage sélectionner pour le "désélectionner".
 
+<p align="center">
+  <img src="https://image.noelshack.com/fichiers/2019/13/4/1553782864-nanikuremastoyo.png">
+</p>
+
 <br> ► Une seconde activité, où l'on affiche l'animation du combat entre les deux personnages que l'on choisit. Le combat est automatique et se fait en tour par tour : il s'arrête lorsque les points de vies d'une des deux combattants passent à 0. À ce moment, on nous propose un bouton qui nous permet de visualiser l'historique du combat.
 Si ça intéresse, les dégats se calculent de la manière suivante = attaque*(2.5/defense-20), qui permet de fixer le minimum de dégats à 2, et le maximum à 18, évitant les combats trop rapides où trop lent. Il y a également un système de de prècision, qui se calcule comme ceci : esquive = vitesse + 30 <=> % de chance de réussir une attaque, avec une maximum de 100% et un minimum de 60%.
 
@@ -67,5 +73,5 @@ Si ça intéresse, les dégats se calculent de la manière suivante = attaque*(2
 
 
 <p align="center">
-  <img width="150" height="300" src="https://image.noelshack.com/fichiers/2019/12/6/1553363970-capture.png">
+  <img src="https://image.noelshack.com/fichiers/2019/13/4/1553782971-tacos.png">
 </p>
