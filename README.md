@@ -53,13 +53,20 @@ Cette activité montre la liste des personnages récupéré via l'Api rest. L'af
 <p align="center">
   <img src="https://image.noelshack.com/fichiers/2019/13/1/1553532795-g4617.png">
 </p>
+<p align="center">
+  <img width="300" height="500" src="https://image.noelshack.com/fichiers/2019/13/4/1553812457-dzdzd.png">
+</p>
 
 ### Mode de combat automatique
 Il s'agit d'une des fonctionnalités supplémentaires que j'ai décidé de rajouter dans mon projet. Ce mode se décompose en trois activités :
 <br> ► Une première activité où l'on nous demande de choisir deux combattants parmi ceux de la liste que l'on nous affiche. Les personnages sélectionnés sont affiché normalement, tandis que les autres sont transparents. On a également la possibilité d'appuyer sur un personnage sélectionner pour le "désélectionner".
 
 <p align="center">
-  <img src="https://image.noelshack.com/fichiers/2019/13/4/1553782864-nanikuremastoyo.png">
+  <img width="300" height="500" src="https://image.noelshack.com/fichiers/2019/13/4/1553782864-nanikuremastoyo.png">
+</p>
+
+<p align="center">
+  <img src="https://image.noelshack.com/fichiers/2019/13/4/1553812655-ezgif-1-777e29559290.gif">
 </p>
 
 <br> ► Une seconde activité, où l'on affiche l'animation du combat entre les deux personnages que l'on choisit. Le combat est automatique et se fait en tour par tour : il s'arrête lorsque les points de vies d'une des deux combattants passent à 0. À ce moment, on nous propose un bouton qui nous permet de visualiser l'historique du combat.
@@ -73,5 +80,5 @@ Si ça intéresse, les dégats se calculent de la manière suivante = attaque*(2
 
 
 <p align="center">
-  <img src="https://image.noelshack.com/fichiers/2019/13/4/1553782971-tacos.png">
+  <img width="300" height="500" src="https://image.noelshack.com/fichiers/2019/13/4/1553782971-tacos.png">
 </p>
