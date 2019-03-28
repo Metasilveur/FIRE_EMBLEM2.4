@@ -13,7 +13,7 @@ Dans ce projet, j'utilise plusieurs recycler view :
 <br> ► Une pour l'affichage des compétences liées aux personnages.
 <br> ► Une pour l'historique du jeu de combat (sur lequel je reviendrai plus tard).
 
-* Utilisation des données en caches :
+* Stockage des données en caches :
 L'application garde simplement en cache le dernier attribut rentré dans le filtre de recherche, via les shared preferance.
 
 * Faire un appel à une API Rest :
@@ -47,12 +47,19 @@ On passe ensuite à l'écran de sélection, qui nous permet de choisir entre deu
 - Un mode de combat automatique.
 - L'affichage de tous les personnages récupérés par l'API rest.
 
+<p align="center">
+  <img width="300" height="500" src="https://image.noelshack.com/fichiers/2019/13/4/1553813544-czecze.png">
+</p>
+
 ### Mode d'affichage des personnages
 Cette activité montre la liste des personnages récupéré via l'Api rest. L'affichage se fait sous forme de colonnes (4)  et de lignes. On peut cliquer une fois pour afficher un aperçu du personnage en haut de l'écran, et cliquer longuement pour afficher, dans une autre activité, le détail et les statistiques du personnage. Enfin, sur cette dernière activité, on peut cliquer sur un bouton "skills", qui affiche la liste des compétences du personnage sélectionné.
 
 <p align="center">
   <img src="https://image.noelshack.com/fichiers/2019/13/1/1553532795-g4617.png">
 </p>
+
+Il y a également un système de filtre, qui met en avant les personnages correspondants aux type de déplacement mit dans le spinner. (les autres personnages seront transparents). C'est également le type de déplacement qui est stocké en cache.
+
 <p align="center">
   <img width="300" height="500" src="https://image.noelshack.com/fichiers/2019/13/4/1553812457-dzdzd.png">
 </p>
