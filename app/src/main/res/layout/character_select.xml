@@ -17,7 +17,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="25dp"
         android:gravity="center"
-        android:text="Choose two fighter ! (2 left)"
+        android:text="Choose two fighter ! (0 left)"
         android:textSize="25dp"/>
 
     <android.support.v7.widget.RecyclerView

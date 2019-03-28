@@ -57,15 +57,11 @@ public class MainActivity extends AppCompatActivity {
 
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-
         recyclerView.setHasFixedSize(true);
-        // use a linear layout manager
-        //layoutManager = new LinearLayoutManager(this);
         layoutManager = new GridLayoutManager(this, 4);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(4, dpToPx(10), true));
-        // define an adapter
         mAdapter = new CharacterAdapter(this, listCharacter);
 
         Spinner spinner = findViewById(R.id.spin_choice);
@@ -118,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view, int position) {
 
                 Character character = listCharacter.get(position);
-                //Toast.makeText(getApplicationContext(), "Nique ta mère !", Toast.LENGTH_SHORT).show();
                 ImageView perso;
                 TextView name_click;
                 perso = findViewById(R.id.perso);
@@ -138,12 +133,13 @@ public class MainActivity extends AppCompatActivity {
             public void onLongClick(View view, int position) {
 
                 Character character = listCharacter.get(position);
+
                 int maxHp = 0;
                 int maxAtq = 0;
                 int maxDef = 0;
                 int maxRes = 0;
                 int maxSpd = 0;
-                //Toast.makeText(getApplicationContext(), ((Character) character).getName() + " is selected, Enculé !", Toast.LENGTH_SHORT).show();
+
                 Intent MyIntent = new Intent(MainActivity.this, SecondActivity.class);
 
                 for(Character charac : listCharacter)
@@ -194,19 +190,6 @@ public class MainActivity extends AppCompatActivity {
                 MyIntent.putExtra("LIST", (Serializable) listSkills);
 
                 startActivity(MyIntent);
-                /*Character character = listCharacter.get(position);
-                //Toast.makeText(getApplicationContext(), "Nique ta mère !", Toast.LENGTH_SHORT).show();
-                ImageView perso;
-                TextView name_click;
-                perso = findViewById(R.id.perso);
-                name_click = findViewById(R.id.name_click);
-
-                name_click.setText(character.getName());
-
-                Glide.with(MainActivity.this)
-                        .load(character.getAssets().getPortrait().getPx113())
-                        //.apply(RequestOptions.circleCropTransform())
-                        .into(perso);*/
             }
         }));
     }
@@ -225,30 +208,27 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
-            int position = parent.getChildAdapterPosition(view); // item position
-            int column = position % spanCount; // item column
+            int position = parent.getChildAdapterPosition(view);
+            int column = position % spanCount;
 
             if (includeEdge) {
-                outRect.left = spacing - column * spacing / spanCount; // spacing - column * ((1f / spanCount) * spacing)
-                outRect.right = (column + 1) * spacing / spanCount; // (column + 1) * ((1f / spanCount) * spacing)
+                outRect.left = spacing - column * spacing / spanCount;
+                outRect.right = (column + 1) * spacing / spanCount;
 
-                if (position < spanCount) { // top edge
+                if (position < spanCount) {
                     outRect.top = spacing;
                 }
-                outRect.bottom = spacing; // item bottom
+                outRect.bottom = spacing;
             } else {
-                outRect.left = column * spacing / spanCount; // column * ((1f / spanCount) * spacing)
-                outRect.right = spacing - (column + 1) * spacing / spanCount; // spacing - (column + 1) * ((1f /    spanCount) * spacing)
+                outRect.left = column * spacing / spanCount;
+                outRect.right = spacing - (column + 1) * spacing / spanCount;
                 if (position >= spanCount) {
-                    outRect.top = spacing; // item top
+                    outRect.top = spacing;
                 }
             }
         }
     }
 
-    /**
-     * Converting dp to pixel
-     */
     private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));

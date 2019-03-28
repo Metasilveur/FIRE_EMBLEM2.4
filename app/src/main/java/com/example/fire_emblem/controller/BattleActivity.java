@@ -40,22 +40,6 @@ public class BattleActivity extends AppCompatActivity {
         int def_Fighter2 = Integer.parseInt(Fighter1.getGrowths().getDef());
         int res_Fighter2 = Integer.parseInt(Fighter1.getGrowths().getRes());
         int spd_Fighter2 = Integer.parseInt(Fighter1.getGrowths().getSpd());
-/*
-        if((Fighter1.getWeaponType().equals("Blue tome"))
-        ||(Fighter1.getWeaponType().equals("Red tome"))
-        ||(Fighter1.getWeaponType().equals("Green tome"))
-        ||(Fighter1.getWeaponType().equals("Colorless tome")))
-        {
-            def_Fighter2 = res_Fighter2;
-        }
-
-        if((Fighter2.getWeaponType().equals("Blue tome"))
-                ||(Fighter2.getWeaponType().equals("Red tome"))
-                ||(Fighter2.getWeaponType().equals("Green tome"))
-                ||(Fighter2.getWeaponType().equals("Colorless tome")))
-        {
-            def_Fighter1 = res_Fighter1;
-        }*/
 
         int cpt_turn=1;
 
@@ -160,9 +144,6 @@ public class BattleActivity extends AppCompatActivity {
 
             battleList.add(new Battle(Fighter1, Fighter2, score1, score2, score1_txt, score2_txt, turn));
         }
-        /*battleList.add( new Battle( Fighter1,Fighter2 , "30-40", "22-40"));
-        battleList.add( new Battle( Fighter1,Fighter2 , "30-40", "22-40"));
-        battleList.add( new Battle( Fighter1,Fighter2 , "30-40", "22-40"));*/
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view_skills);
 
