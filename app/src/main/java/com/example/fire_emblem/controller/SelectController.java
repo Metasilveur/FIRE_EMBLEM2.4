@@ -27,24 +27,15 @@ public class SelectController {
 
     public void onCreate() {
 
-        //Pour ceux qui veulent aller plus loin
-        //Il faut créer ces objets avec des singletons.
-        // Voir le cours de Génie Logiciel -> Singleton
-        //Pour ceux qui veulent encore aller plus loin
-        //Voir Injection de dépendances
-        //On crée un objet gson
-
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
 
-        //On crée un objet retrofit
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://raw.githubusercontent.com/Metasilveur/MobileFireEmblem/master/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
-        //On crée notre instance de notre RestAPI Pokemon.
         RestFireEmblemApi restApi = retrofit.create(RestFireEmblemApi.class);
 
 

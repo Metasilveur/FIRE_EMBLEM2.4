@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Rect;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +13,10 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.GridLayoutManager;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.fire_emblem.R;
 import com.example.fire_emblem.controller.BattleActivityDynamic;
@@ -22,6 +26,8 @@ import com.example.fire_emblem.model.Character;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.graphics.Color.WHITE;
 
 public class SelectCharacter extends AppCompatActivity {
 
@@ -70,7 +76,7 @@ public class SelectCharacter extends AppCompatActivity {
             public void onClick(View v) {
                 if(cpt == 2)
                 {
-                    Intent MyIntent = new Intent(SelectCharacter.this, BattleActivityDynamic.class);
+                    final Intent MyIntent = new Intent(SelectCharacter.this, BattleActivityDynamic.class);
                     int stop = 0;
                     for(Character perso : listCharacter)
                     {
@@ -83,7 +89,39 @@ public class SelectCharacter extends AppCompatActivity {
                             }
                             else{
                                 MyIntent.putExtra("Fight2", (Serializable) perso);
-                                startActivity(MyIntent);
+
+                                final ImageView animation1 = findViewById(R.id.loading);
+
+                                animation1.setBackgroundResource(R.drawable.loading);
+
+                                final AnimationDrawable slashAnim1 = (AnimationDrawable) animation1.getBackground();
+
+                                slashAnim1.setOneShot(false);
+
+                                AlphaAnimation TEST1 = new AlphaAnimation(1.0f,0.0f);
+
+                                TEST1.setDuration(3000);
+                                TEST1.setFillAfter(true);
+
+                                TEST1.setAnimationListener(new Animation.AnimationListener() {
+                                    @Override
+                                    public void onAnimationStart(Animation animation) {
+                                        slashAnim1.start();
+                                    }
+
+                                    @Override
+                                    public void onAnimationEnd(Animation animation) {
+                                        startActivity(MyIntent);
+
+                                    }
+
+                                    @Override
+                                    public void onAnimationRepeat(Animation animation) {
+
+                                    }
+                                });
+
+                                animation1.startAnimation(TEST1);
                             }
                         }
                     }

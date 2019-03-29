@@ -15,10 +15,10 @@
         android:layout_width="match_parent"
         android:layout_height="47dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="0dp"
         android:gravity="center"
         android:text="Choose two fighter ! (0 left)"
-        android:textSize="25dp"/>
+        android:textSize="25dp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view_selection"
@@ -41,5 +41,12 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="92dp"
         android:layout_marginBottom="33dp" />
+
+    <ImageView
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="489dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="113dp" />
 
 </RelativeLayout>
