@@ -1,4 +1,4 @@
-Projet Mobile
+Projet Mobile - Battle Heroes !
 ========
 
 ## Présentation
