@@ -25,6 +25,10 @@ J'ai opté pour l'architecture MVC (modèle - vue - controlleur)
 * Notifications Push :
 Les notifications push se font via FireBase. 
 
+<p align="center">
+  <img width="280" height="500" src="https://image.noelshack.com/fichiers/2019/13/5/1553855641-55526837-269848100592149-1881582235589541888-n.jpg">
+</p>
+
 * Utiliser GitFlow : 
 Il n'y a que deux branches, la branche "master" et la branche "Paufinage".
 
